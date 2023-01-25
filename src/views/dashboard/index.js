@@ -84,15 +84,15 @@ function Dashboard() {
               spacing={3}
               sx={{ justifyContent: "center", alignItems: "center" }}
             >
-              {/* <a href="http://13.232.214.9/"> */}
-              <Avatar
-                sx={{ bgcolor: "deepGray", width: 200, height: 200 }}
-                // image={
-                //   "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT5W71UTcSBm3r5l9NzBemglq983bYvKOHRkw&usqp=CAU"
-                // }
-                text="Male"
-              />
-              {/* </a> */}
+              <a href="http://13.232.214.9/">
+                <Avatar
+                  sx={{ bgcolor: "deepGray", width: 200, height: 200 }}
+                  // image={
+                  //   "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT5W71UTcSBm3r5l9NzBemglq983bYvKOHRkw&usqp=CAU"
+                  // }
+                  text="Male"
+                />
+              </a>
               <StyledOr component="p" variant="p">
                 OR
               </StyledOr>
