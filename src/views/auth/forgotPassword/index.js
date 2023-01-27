@@ -36,7 +36,7 @@ export default function ForgotPassword() {
           backgroundColor: (t) =>
             t.palette.mode === "light" ? t.palette.bl[50] : t.palette.grey[900],
           backgroundSize: "cover",
-          backgroundPosition: "center",
+          backgroundPosition: "center 0px",
         }}
       />
       <Grid

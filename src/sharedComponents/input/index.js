@@ -46,7 +46,7 @@ const ButtonComp = (props) => {
       variant={props.variant}
       startIcon={props.startIcon}
       onClick={props.onClick}
-      sx={{ mb: 2, ...props.sx }}
+      sx={{ mb: 2, fontWeight: "bold", ...props.sx }}
     >
       {props.children}
     </StyledButton>

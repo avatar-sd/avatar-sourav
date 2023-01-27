@@ -4,28 +4,33 @@ import DashboardLayout from "../../sharedComponents/dashboardLayout";
 import Avatar from "../../sharedComponents/avatar";
 import { Stack, Typography } from "@mui/material";
 import { StyledOr } from "./style";
+import AvatarComponent from "../../sharedComponents/avatar";
 
 function SaveAvatar() {
   return (
     <DashboardLayout title="hii">
       <div style={{ width: "100%", height: "100%" }}>
-        <Grid container spacing={2} sx={{marginTop: "10px"}}>
+        <Grid container spacing={2} sx={{ marginTop: "10px" }}>
           <Grid item>
-            <Box
+            <Avatar
               sx={{
+                bgcolor: "deepGray",
                 width: 150,
                 height: 150,
-                backgroundColor: "gray",
+                borderRadius: "15px",
               }}
+              image={require("../../assets/images/male.png")}
             />
           </Grid>
           <Grid item>
-            <Box
+            <AvatarComponent
               sx={{
+                bgcolor: "deepGray",
                 width: 150,
                 height: 150,
-                backgroundColor: "gray",
+                borderRadius: "15px",
               }}
+              image={require("../../assets/images/female.png")}
             />
           </Grid>
         </Grid>

@@ -118,8 +118,12 @@ function DashboardLayout(props) {
             variant="h6"
             color="inherit"
             noWrap
-            sx={{ flexGrow: 1 }}
+            sx={{ flexGrow: 1, display: "flex", alignItems: 'Center' }}
           >
+            <img
+              style={{ maxWidth: "40px", marginTop: "5px", marginRight: "20px" }}
+              src={require("../../assets/images/logo_icon.png")}
+            />{" "}
             {props.title}
           </Typography>
           {props.continue}

@@ -89,28 +89,32 @@ export default function Register() {
         item
         xs={false}
         sm={4}
-        md={7}
+        md={6}
         sx={{
           backgroundImage: `url(${require("../../../assets/images/metaverse.png")})`,
           backgroundRepeat: "no-repeat",
           backgroundColor: (t) =>
             t.palette.mode === "light" ? t.palette.bl[50] : t.palette.grey[900],
           backgroundSize: "cover",
-          backgroundPosition: "center",
+          backgroundPosition: "center 0px",
         }}
+      />
+      <img
+        style={{ position: "absolute", top: "50px", left: "40px" }}
+        src={require("../../../assets/images/logo.png")}
       />
       <Grid
         item
         xs={12}
         sm={8}
-        md={5}
+        md={6}
         component={Paper}
         elevation={6}
         square
         sx={{
           backgroundColor: "#000000",
-          paddingLeft: "5vw",
-          paddingRight: "5vw",
+          paddingLeft: "10vw",
+          paddingRight: "10vw",
           display: "flex",
           justifyContent: "center",
           alignItems: "center",
@@ -122,7 +126,11 @@ export default function Register() {
             mx: 4,
           }}
         >
-          <Typography component="h1" variant="h5" sx={{ textAlign: "center" }}>
+          <Typography
+            component="h1"
+            variant="h5"
+            sx={{ textAlign: "center", fontWeight: "bold" }}
+          >
             SignUp
           </Typography>
           <Typography

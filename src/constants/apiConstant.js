@@ -1,7 +1,7 @@
 export const API = {
-  currentEnv: 'dev',
+  // currentEnv: 'dev',
   // currentEnv: 'qa',
-  // currentEnv: "prod",
+  currentEnv: "prod",
   baseUrls: {
     // dev: "http://192.168.0.108/api",
     dev: "http://65.2.142.134/api",

@@ -17,6 +17,7 @@ const AvatarComponent = (props) => {
         sx={{ "&:hover": { outline: "4px solid white;" }, ...props.sx }}
         alt="image"
         src={props.image}
+        onClick={props.onClick}
       />
       {props.text ? (
         <Typography component="h5" variant="h5">
