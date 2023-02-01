@@ -6,7 +6,8 @@ export const StyledOr = Styled(Typography)`
     width: 100%;
     text-align: center;
     color: gray;
-    margin: 10px !important;
+    margin-top: 10px !important;
+    margin-bottom: 10px !important;
     &::before{
         content: '';
         height: 1px;

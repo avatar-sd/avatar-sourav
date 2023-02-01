@@ -145,10 +145,24 @@ export default function Login() {
           >
             Welcome back You've been missed!
           </Typography>
-          <ButtonComp variant="outlined" sx={{ mt: 3, mb: 2 }}>
+          <ButtonComp
+            variant="outlined"
+            sx={{ mt: 3, mb: 2 }}
+            startIcon={
+              <img
+                src={require("../../../assets/images/metamask.png")}
+                style={{ width: "30px", marginRight: "10px" }}
+              />
+            }
+          >
             Connect with MetaMask
           </ButtonComp>
-          <ButtonComp variant="outlined" sx={{ mb: 2 }}>
+          <ButtonComp variant="outlined" sx={{ mb: 2 }} startIcon={
+              <img
+                src={require("../../../assets/images/google.png")}
+                style={{ width: "30px", marginRight: "10px" }}
+              />
+            }>
             Connect with Google
           </ButtonComp>
           <StyledOr component="p" variant="p">
@@ -163,8 +177,8 @@ export default function Login() {
             sx={{ mt: 1 }}
           >
             <InputComp
-              placeholder="Enter your Email"
-              name="Email"
+              placeholder="Enter your username"
+              name="Username"
               value={email}
               onChange={(e) => setEmail(e.target.value)}
             />
@@ -177,7 +191,7 @@ export default function Login() {
               />
             ) : !isOtpLogin ? (
               <PasswordComp
-                placeholder="Enter your password"
+                placeholder="Enter your Password"
                 name="Password"
                 value={password}
                 onChange={(e) => setPassword(e.target.value)}
@@ -209,7 +223,7 @@ export default function Login() {
                 variant="contained"
                 sx={{ mt: 3, mb: 2 }}
               >
-                {isUserVerified ? "Log In" : "Sent OTP"}
+                {isUserVerified ? "Log In" : "Send OTP"}
               </ButtonComp>
             ) : (
               <ButtonComp
@@ -217,7 +231,7 @@ export default function Login() {
                 variant="contained"
                 sx={{ mt: 3, mb: 2 }}
               >
-                Log In
+                Login
               </ButtonComp>
             )}
             <ButtonComp

@@ -33,7 +33,7 @@ export const MainListItems = () => {
           <ListItemText primary="Customers" />
         </ListItemButton>
       ) : null}
-      <ListItemButton onClick={() => navigate("/save_avatar")}>
+      <ListItemButton onClick={() => navigate("/avatar_list")}>
         <ListItemIcon>
           <LayersIcon />
         </ListItemIcon>

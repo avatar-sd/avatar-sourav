@@ -5,6 +5,7 @@ import ForgotPassword from "./views/auth/forgotPassword";
 import Dashboard from "./views/dashboard";
 import SaveAvatar from "./views/saveAvatar";
 import UserList from "./views/userList";
+import Preview from "./views/preview";
 
 const Router = createBrowserRouter([
   {
@@ -13,13 +14,18 @@ const Router = createBrowserRouter([
     children: [],
   },
   {
-    path: "/save_avatar",
+    path: "/avatar_list",
     element: <SaveAvatar />,
     children: [],
   },
   {
     path: "/user_list",
     element: <UserList />,
+    children: [],
+  },
+  {
+    path: "/preview",
+    element: <Preview />,
     children: [],
   },
   {
@@ -39,7 +45,7 @@ const Router = createBrowserRouter([
   },
   {
     path: "*",
-    element: <hi>hii</hi>,
+    element: <h2 style={{ textAlign: "center", width: '100%' }}>Page Not Found</h2>,
   },
 ]);
 

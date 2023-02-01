@@ -145,10 +145,28 @@ export default function Register() {
           >
             Welcome back You've been missed!
           </Typography>
-          <ButtonComp variant="outlined" sx={{ mt: 3, mb: 2 }}>
+          <ButtonComp
+            variant="outlined"
+            sx={{ mt: 3, mb: 2 }}
+            startIcon={
+              <img
+                src={require("../../../assets/images/metamask.png")}
+                style={{ width: "30px", marginRight: "10px" }}
+              />
+            }
+          >
             Connect with MetaMask
           </ButtonComp>
-          <ButtonComp variant="outlined" sx={{ mb: 2 }}>
+          <ButtonComp
+            variant="outlined"
+            sx={{ mb: 2 }}
+            startIcon={
+              <img
+                src={require("../../../assets/images/google.png")}
+                style={{ width: "30px", marginRight: "10px" }}
+              />
+            }
+          >
             Connect with Google
           </ButtonComp>
           <StyledOr component="p" variant="p">
@@ -169,13 +187,13 @@ export default function Register() {
             <InputComp
               value={email}
               onChange={(e) => setEmail(e.target.value)}
-              placeholder="Enter your email"
-              name="Email"
+              placeholder="Enter your username"
+              name="Username"
             />
             <PasswordComp
               value={password}
               onChange={(e) => setPassword(e.target.value)}
-              placeholder="Enter your password"
+              placeholder="Enter your Password"
               name="Password"
             />
             {isUserVerified ? (
@@ -187,7 +205,7 @@ export default function Register() {
               />
             ) : null}
             <ButtonComp type="submit" variant="contained" sx={{ mt: 3, mb: 2 }}>
-              {isUserVerified ? "Register" : "Sent OTP"}
+              {isUserVerified ? "Register" : "Send OTP"}
             </ButtonComp>
             {isUserVerified ? (
               <p

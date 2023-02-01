@@ -27,7 +27,7 @@ function UserList() {
               x.name,
               x.user?.email,
               x.metaId,
-              <Button onClick={() => navigate("/save_avatar")}>View</Button>
+              <Button onClick={() => navigate("/avatar_list")}>View</Button>
             )
           );
         });
