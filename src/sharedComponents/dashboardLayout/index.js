@@ -93,42 +93,48 @@ function DashboardLayout(props) {
 
   return (
     <Box sx={{ display: "flex" }}>
-      <AppBar position="absolute" open={open}>
-        <Toolbar
-          sx={{
-            pr: "24px", // keep right padding when drawer closed
-            backgroundColor: "#121212",
-            borderBottom: "1px solid #212121",
-          }}
-        >
-          <IconButton
-            edge="start"
-            color="inherit"
-            aria-label="open drawer"
-            onClick={toggleDrawer}
+      {!props.noAppBar ? (
+        <AppBar position="absolute" open={open}>
+          <Toolbar
             sx={{
-              marginRight: "36px",
-              display: "none",
+              pr: "24px", // keep right padding when drawer closed
+              backgroundColor: "#121212",
+              borderBottom: "1px solid #212121",
             }}
           >
-            <MenuIcon />
-          </IconButton>
-          <Typography
-            component="h1"
-            variant="h6"
-            color="inherit"
-            noWrap
-            sx={{ flexGrow: 1, display: "flex", alignItems: 'Center' }}
-          >
-            <img
-              style={{ maxWidth: "40px", marginTop: "5px", marginRight: "20px" }}
-              src={require("../../assets/images/logo_icon.png")}
-            />{" "}
-            {props.title}
-          </Typography>
-          {props.continue}
-        </Toolbar>
-      </AppBar>
+            {/* <IconButton
+              edge="start"
+              color="inherit"
+              aria-label="open drawer"
+              onClick={toggleDrawer}
+              sx={{
+                marginRight: "36px",
+                display: "none",
+              }}
+            >
+              <MenuIcon />
+            </IconButton> */}
+            <Typography
+              component="h1"
+              variant="h6"
+              color="inherit"
+              noWrap
+              sx={{ flexGrow: 1, display: "flex", alignItems: "Center" }}
+            >
+              <img
+                style={{
+                  maxWidth: "40px",
+                  marginTop: "5px",
+                  marginRight: "20px",
+                }}
+                src={require("../../assets/images/logo_icon.png")}
+              />
+              {props.title}
+            </Typography>
+            {props.continue}
+          </Toolbar>
+        </AppBar>
+      ) : null}
       <Drawer variant="permanent" open={open}>
         <Toolbar
           sx={{
@@ -138,14 +144,21 @@ function DashboardLayout(props) {
             px: [1],
           }}
         >
-          <IconButton onClick={toggleDrawer}>
-            {/* <ChevronLeftIcon /> */}
+          <IconButton>
+            <img
+              style={{
+                maxWidth: "40px",
+                marginTop: "5px",
+                marginLeft: "20px",
+              }}
+              src={require("../../assets/images/logo_icon.png")}
+            />
           </IconButton>
         </Toolbar>
-        <Divider />
+        {/* <Divider /> */}
         <List component="nav">
           <MainListItems />
-          <Divider sx={{ my: 1 }} />
+          {/* <Divider sx={{ my: 1 }} /> */}
           <SecondaryListItems />
         </List>
       </Drawer>
@@ -163,14 +176,14 @@ function DashboardLayout(props) {
       >
         <Container
           sx={{
-            mt: "65px",
+            mt: props.noAppBar ? "0px" : "65px",
             display: "flex",
             alignItems: "center",
             justifyContent: "center",
-            height: "calc(100vh - 65px)",
+            height: props.noAppBar ? "100vh" : "calc(100vh - 65px)",
             overflow: "hidden",
             overflowY: "scroll",
-            maxWidth: 'unset !important',
+            maxWidth: "unset !important",
             backgroundColor: "#121212",
           }}
         >

@@ -55,6 +55,7 @@ function Dashboard() {
 
   return (
     <DashboardLayout
+      noAppBar={!(page < 3)}
       // title={ ` Step 1 of 4: Select Your Bodytype`}
       title={
         page === 1 ? (
@@ -253,9 +254,9 @@ function Dashboard() {
           <Grid item xs={12} md={12} lg={12}>
             <iframe
               src="http://13.232.214.9"
-              style={{ width: "100vw", height: "calc(100vh - 55px)" }}
+              style={{ width: "calc(100vw - 72px)", height: "100vh", border: "0px" }}
             ></iframe>
-            <Box
+            {/* <Box
               sx={{
                 flexGrow: 1,
                 bgcolor: "background.paper",
@@ -493,7 +494,7 @@ function Dashboard() {
                   </Grid>
                 </Grid>
               </TabPanel>
-            </Box>
+            </Box> */}
           </Grid>
         ) : page === 4 ? (
           <Box
