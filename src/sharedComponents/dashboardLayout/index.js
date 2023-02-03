@@ -162,7 +162,6 @@ function DashboardLayout(props) {
         }}
       >
         <Container
-          maxWidth="lg"
           sx={{
             mt: "65px",
             display: "flex",
@@ -171,6 +170,7 @@ function DashboardLayout(props) {
             height: "calc(100vh - 65px)",
             overflow: "hidden",
             overflowY: "scroll",
+            maxWidth: 'unset !important',
             backgroundColor: "#121212",
           }}
         >
