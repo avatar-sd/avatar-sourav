@@ -15,7 +15,7 @@ import { useNavigate } from "react-router-dom";
 import BorderColorIcon from "@mui/icons-material/BorderColor";
 
 function Dashboard() {
-  const [page, setPage] = React.useState(4);
+  const [page, setPage] = React.useState(1);
   const [value, setValue] = React.useState(0);
   const [name, setName] = React.useState("Name");
   const [details, setDetails] = React.useState("");
