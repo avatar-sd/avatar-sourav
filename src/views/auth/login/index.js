@@ -109,7 +109,7 @@ export default function Login() {
         sm={8}
         md={6}
         component={Paper}
-        elevation={6}
+        elevation={0}
         square
         sx={{
           backgroundColor: "#000000",

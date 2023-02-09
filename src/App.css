@@ -57,3 +57,11 @@ svg{
     transform: rotate(360deg);
   }
 }
+
+
+/* manna */
+input:-webkit-autofill{
+  -webkit-box-shadow: 0 0 0 30px black inset !important;
+  -webkit-border-image: none;
+  border-radius: unset !important;
+}
