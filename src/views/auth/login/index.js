@@ -91,18 +91,29 @@ export default function Login() {
         sm={4}
         md={6}
         sx={{
-          backgroundImage: `url(${require("../../../assets/images/metaverse.png")})`,
+          backgroundImage: `url(${require("../../../assets/images/Avatar.png")})`,
           backgroundRepeat: "no-repeat",
           backgroundColor: (t) =>
             t.palette.mode === "light" ? t.palette.bl[50] : "#191919",
-          backgroundSize: "COVER",
-          backgroundPosition: "center 0px",
+          // backgroundSize: "COVER",
+          backgroundPosition: "right bottom",
         }}
       />
-      <img
-        style={{ position: "absolute", top: "50px", left: "40px" }}
-        src={require("../../../assets/images/logo.png")}
-      />
+      <div style={{ position: "absolute", top: "50px", left: "40px" }}>
+
+
+        <img
+
+          src={require("../../../assets/images/logo.png")}
+        />
+        <div style={{marginTop:"40px" }}>
+          <span className="" style={{ fontSize: "80px", fontWeight: "bold", color: "white", }}>
+            Metaverse
+          </span>
+          <br />
+          <img src={require("../../../assets/images/3D Avatar Maker.png")} />
+        </div>
+      </div>
       <Grid
         item
         xs={12}
@@ -158,11 +169,11 @@ export default function Login() {
             Connect with MetaMask
           </ButtonComp>
           <ButtonComp variant="outlined" sx={{ mb: 2 }} startIcon={
-              <img
-                src={require("../../../assets/images/google.png")}
-                style={{ width: "30px", marginRight: "10px" }}
-              />
-            }>
+            <img
+              src={require("../../../assets/images/google.png")}
+              style={{ width: "30px", marginRight: "10px" }}
+            />
+          }>
             Connect with Google
           </ButtonComp>
           <StyledOr component="p" variant="p">
