@@ -1,5 +1,5 @@
 export const API = {
-  currentEnv: 'dev',
+  currentEnv: 'dev', 
   // currentEnv: 'qa',
   // currentEnv: "prod",
   baseUrls: {
