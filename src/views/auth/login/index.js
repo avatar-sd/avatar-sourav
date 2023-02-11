@@ -95,7 +95,7 @@ export default function Login() {
           backgroundRepeat: "no-repeat",
           backgroundColor: (t) =>
             t.palette.mode === "light" ? t.palette.bl[50] : "#191919",
-          // backgroundSize: "COVER",
+          backgroundSize: "50vh",
           backgroundPosition: "right bottom",
         }}
       />
@@ -129,6 +129,9 @@ export default function Login() {
           display: "flex",
           justifyContent: "center",
           alignItems: "center",
+          height: "100vh",
+          overflow: "hidden",
+          overflowY: "scroll"
         }}
       >
         <Box

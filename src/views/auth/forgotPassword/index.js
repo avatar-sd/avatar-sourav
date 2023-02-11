@@ -29,31 +29,47 @@ export default function ForgotPassword() {
         item
         xs={false}
         sm={4}
-        md={7}
+        md={6}
         sx={{
-          // backgroundImage: "url(https://source.unsplash.com/random)",
+          backgroundImage: `url(${require("../../../assets/images/Avatar.png")})`,
           backgroundRepeat: "no-repeat",
           backgroundColor: (t) =>
-            t.palette.mode === "light" ? t.palette.bl[50] : t.palette.grey[900],
-          backgroundSize: "cover",
-          backgroundPosition: "center 0px",
+            t.palette.mode === "light" ? t.palette.bl[50] : "#191919",
+          backgroundSize: "50vh",
+          backgroundPosition: "right bottom",
         }}
       />
+      <div style={{ position: "absolute", top: "50px", left: "40px" }}>
+        <img src={require("../../../assets/images/logo.png")} />
+        <div style={{ marginTop: "40px" }}>
+          <span
+            className=""
+            style={{ fontSize: "80px", fontWeight: "bold", color: "white" }}
+          >
+            Metaverse
+          </span>
+          <br />
+          <img src={require("../../../assets/images/3D Avatar Maker.png")} />
+        </div>
+      </div>
       <Grid
         item
         xs={12}
         sm={8}
-        md={5}
-        component={Paper}
+        md={6}
+        // component={Paper}
         elevation={6}
         square
         sx={{
           backgroundColor: "#000000",
-          paddingLeft: "5vw",
-          paddingRight: "5vw",
+          paddingLeft: "10vw",
+          paddingRight: "10vw",
           display: "flex",
           justifyContent: "center",
           alignItems: "center",
+          height: "100vh",
+          overflow: "hidden",
+          overflowY: "scroll",
         }}
       >
         <Box

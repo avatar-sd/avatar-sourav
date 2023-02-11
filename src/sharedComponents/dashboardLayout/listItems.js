@@ -9,6 +9,7 @@ import PeopleIcon from "@mui/icons-material/People";
 import BarChartIcon from "@mui/icons-material/BarChart";
 import LayersIcon from "@mui/icons-material/Layers";
 import Logout from "@mui/icons-material/Logout";
+import AddLogo from "../../assets/images/add.png";
 import AssignmentIcon from "@mui/icons-material/Assignment";
 import { useNavigate } from "react-router-dom";
 import { shallowEqual, useDispatch, useSelector } from "react-redux";
@@ -50,10 +51,16 @@ export const SecondaryListItems = () => {
   const logout = () => {
     localStorage.removeItem("user");
     dispatch(tokenUpdate({ data: null }));
-    navigate('/login')
+    navigate("/login");
   };
   return (
     <React.Fragment>
+      <ListItemButton>
+        <ListItemIcon>
+          <img src={AddLogo} style={{ width: "30px", marginLeft: "-3px" }} />
+        </ListItemIcon>
+        <ListItemText primary="Integrations" />
+      </ListItemButton>
       <ListItemButton onClick={logout}>
         <ListItemIcon>
           <Logout />

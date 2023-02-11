@@ -62,7 +62,7 @@ function Dashboard() {
           <span style={{ cursor: "pointer" }}>
             Step 1 of 4: Select Your Bodytype
           </span>
-        ) : page === 2 ? (
+        ) : page > 1 && page < 2 ? (
           <span style={{ cursor: "pointer" }} onClick={() => setPage(1)}>
             <ArrowBackIosIcon style={{ paddingTop: "5px" }} /> Step 2 of 4: Pick
             an Avatar
@@ -154,7 +154,7 @@ function Dashboard() {
                 sx={{ bgcolor: "dimgrey", width: 200, height: 200 }}
                 image={require("../../assets/images/male.png")}
                 text="Male"
-                onClick={() => setPage(2)}
+                onClick={() => setPage(1.4)}
               />
               <StyledOr component="p" variant="p">
                 OR
@@ -163,11 +163,11 @@ function Dashboard() {
                 sx={{ bgcolor: "dimgrey", width: 200, height: 200 }}
                 image={require("../../assets/images/female.png")}
                 text="Female"
-                onClick={() => setPage(2)}
+                onClick={() => setPage(1.6)}
               />
             </Stack>
           </Paper>
-        ) : page == 2 ? (
+        ) : (page > 1 && page < 2) || page === 2 ? (
           <Paper
             sx={{
               display: "flex",
@@ -185,76 +185,125 @@ function Dashboard() {
               Pick an Avatar
             </Typography>
             <Grid container spacing={5}>
-              <Grid item>
-                <Avatar
-                  sx={{ bgcolor: "deepGray", width: 100, height: 100 }}
-                  image={require("../../assets/images/male-1.png")}
-                  onClick={() => setPage(3)}
-                />
-              </Grid>
-              <Grid item>
-                <Avatar
-                  sx={{ bgcolor: "deepGray", width: 100, height: 100 }}
-                  image={require("../../assets/images/male-2.png")}
-                  onClick={() => setPage(3)}
-                />
-              </Grid>
-              <Grid item>
-                <Avatar
-                  sx={{ bgcolor: "deepGray", width: 100, height: 100 }}
-                  image={require("../../assets/images/male-3.png")}
-                  onClick={() => setPage(3)}
-                />
-              </Grid>
-              <Grid item>
-                <Avatar
-                  sx={{ bgcolor: "deepGray", width: 100, height: 100 }}
-                  image={require("../../assets/images/male-4.png")}
-                  onClick={() => setPage(3)}
-                />
-              </Grid>
-              <Grid item>
-                <Avatar
-                  sx={{ bgcolor: "deepGray", width: 100, height: 100 }}
-                  image={require("../../assets/images/male-5.png")}
-                  onClick={() => setPage(3)}
-                />
-              </Grid>
-              <Grid item>
-                <Avatar
-                  sx={{ bgcolor: "deepGray", width: 100, height: 100 }}
-                  image={require("../../assets/images/male-6.png")}
-                  onClick={() => setPage(3)}
-                />
-              </Grid>
-              <Grid item>
-                <Avatar
-                  sx={{ bgcolor: "deepGray", width: 100, height: 100 }}
-                  image={require("../../assets/images/male-7.png")}
-                  onClick={() => setPage(3)}
-                />
-              </Grid>
-              <Grid item>
-                <Avatar
-                  sx={{ bgcolor: "deepGray", width: 100, height: 100 }}
-                  image={require("../../assets/images/male-8.png")}
-                  onClick={() => setPage(3)}
-                />
-              </Grid>
-              <Grid item>
-                <Avatar
-                  sx={{ bgcolor: "deepGray", width: 100, height: 100 }}
-                  image={require("../../assets/images/male-1.png")}
-                  onClick={() => setPage(3)}
-                />
-              </Grid>
+              {(page > 1 && page <= 1.5) || page === 2 ? (
+                <Grid item>
+                  <Avatar
+                    sx={{ bgcolor: "#343A40", width: 100, height: 100 }}
+                    image={require("../../assets/images/male-1.png")}
+                    onClick={() => setPage(3)}
+                  />
+                </Grid>
+              ) : null}
+              {(page > 1 && page <= 1.5) || page === 2 ? (
+                <Grid item>
+                  <Avatar
+                    sx={{ bgcolor: "#343A40", width: 100, height: 100 }}
+                    image={require("../../assets/images/male-2.png")}
+                    onClick={() => setPage(3)}
+                  />
+                </Grid>
+              ) : null}
+              {(page > 1 && page <= 1.5) || page === 2 ? (
+                <Grid item>
+                  <Avatar
+                    sx={{ bgcolor: "#343A40", width: 100, height: 100 }}
+                    image={require("../../assets/images/male-3.png")}
+                    onClick={() => setPage(3)}
+                  />
+                </Grid>
+              ) : null}
+              {(page > 1 && page <= 1.5) || page === 2 ? (
+                <Grid item>
+                  <Avatar
+                    sx={{ bgcolor: "#343A40", width: 100, height: 100 }}
+                    image={require("../../assets/images/male-4.png")}
+                    onClick={() => setPage(3)}
+                  />
+                </Grid>
+              ) : null}
+              {(page > 1 && page <= 1.5) || page === 2 ? (
+                <Grid item>
+                  <Avatar
+                    sx={{ bgcolor: "#343A40", width: 100, height: 100 }}
+                    image={require("../../assets/images/male-5.png")}
+                    onClick={() => setPage(3)}
+                  />
+                </Grid>
+              ) : null}
+              {(page > 1 && page <= 1.5) || page === 2 ? (
+                <Grid item>
+                  <Avatar
+                    sx={{ bgcolor: "#343A40", width: 100, height: 100 }}
+                    image={require("../../assets/images/male-6.png")}
+                    onClick={() => setPage(3)}
+                  />
+                </Grid>
+              ) : null}
+              {(page > 1 && page <= 1.5) || page === 2 ? (
+                <Grid item>
+                  <Avatar
+                    sx={{ bgcolor: "#343A40", width: 100, height: 100 }}
+                    image={require("../../assets/images/male-7.png")}
+                    onClick={() => setPage(3)}
+                  />
+                </Grid>
+              ) : null}
+              {(page > 1 && page <= 1.5) || page === 2 ? (
+                <Grid item>
+                  <Avatar
+                    sx={{ bgcolor: "#343A40", width: 100, height: 100 }}
+                    image={require("../../assets/images/male-8.png")}
+                    onClick={() => setPage(3)}
+                  />
+                </Grid>
+              ) : null}
+              {(page > 1 && page <= 1.5) || page === 2 ? (
+                <Grid item>
+                  <Avatar
+                    sx={{ bgcolor: "#343A40", width: 100, height: 100 }}
+                    image={require("../../assets/images/male-1.png")}
+                    onClick={() => setPage(3)}
+                  />
+                </Grid>
+              ) : null}
+              {(page >= 1.5 && page < 2) || page === 2 ? (
+                <Grid item>
+                  <Avatar
+                    sx={{ bgcolor: "#343A40", width: 100, height: 100 }}
+                    image={require("../../assets/images/female.png")}
+                    onClick={() => setPage(3)}
+                  />
+                </Grid>
+              ) : null}
+              {(page >= 1.5 && page < 2) || page === 2 ? (
+                <Grid item>
+                  <Avatar
+                    sx={{ bgcolor: "#343A40", width: 100, height: 100 }}
+                    image={require("../../assets/images/female.png")}
+                    onClick={() => setPage(3)}
+                  />
+                </Grid>
+              ) : null}
+              {(page >= 1.5 && page < 2) || page === 2 ? (
+                <Grid item>
+                  <Avatar
+                    sx={{ bgcolor: "#343A40", width: 100, height: 100 }}
+                    image={require("../../assets/images/female.png")}
+                    onClick={() => setPage(3)}
+                  />
+                </Grid>
+              ) : null}
             </Grid>
           </Paper>
         ) : page === 3 ? (
           <Grid item xs={12} md={12} lg={12}>
             <iframe
               src="http://13.232.214.9"
-              style={{ width: "calc(100vw - 72px)", height: "100vh", border: "0px" }}
+              style={{
+                width: "calc(100vw - 72px)",
+                height: "100vh",
+                border: "0px",
+              }}
             ></iframe>
             {/* <Box
               sx={{
@@ -281,7 +330,7 @@ function Dashboard() {
                   icon={
                     <Avatar
                       sx={{
-                        bgcolor: "deepGray",
+                        bgcolor: "#343A40",
                         width: 50,
                         height: 50,
                         borderRadius: "15px",
@@ -296,7 +345,7 @@ function Dashboard() {
                   icon={
                     <Avatar
                       sx={{
-                        bgcolor: "deepGray",
+                        bgcolor: "#343A40",
                         width: 50,
                         height: 50,
                         borderRadius: "15px",
@@ -311,7 +360,7 @@ function Dashboard() {
                   icon={
                     <Avatar
                       sx={{
-                        bgcolor: "deepGray",
+                        bgcolor: "#343A40",
                         width: 50,
                         height: 50,
                         borderRadius: "15px",
@@ -326,7 +375,7 @@ function Dashboard() {
                   icon={
                     <Avatar
                       sx={{
-                        bgcolor: "deepGray",
+                        bgcolor: "#343A40",
                         width: 50,
                         height: 50,
                         borderRadius: "15px",
@@ -341,7 +390,7 @@ function Dashboard() {
                   icon={
                     <Avatar
                       sx={{
-                        bgcolor: "deepGray",
+                        bgcolor: "#343A40",
                         width: 50,
                         height: 50,
                         borderRadius: "15px",
@@ -356,7 +405,7 @@ function Dashboard() {
                   icon={
                     <Avatar
                       sx={{
-                        bgcolor: "deepGray",
+                        bgcolor: "#343A40",
                         width: 50,
                         height: 50,
                         borderRadius: "15px",
@@ -371,7 +420,7 @@ function Dashboard() {
                   icon={
                     <Avatar
                       sx={{
-                        bgcolor: "deepGray",
+                        bgcolor: "#343A40",
                         width: 50,
                         height: 50,
                         borderRadius: "15px",
@@ -388,7 +437,7 @@ function Dashboard() {
                   <Grid item>
                     <Avatar
                       sx={{
-                        bgcolor: "deepGray",
+                        bgcolor: "#343A40",
                         width: 50,
                         height: 50,
                         borderRadius: "15px",
@@ -399,7 +448,7 @@ function Dashboard() {
                   <Grid item>
                     <Avatar
                       sx={{
-                        bgcolor: "deepGray",
+                        bgcolor: "#343A40",
                         width: 50,
                         height: 50,
                         borderRadius: "15px",
@@ -410,7 +459,7 @@ function Dashboard() {
                   <Grid item>
                     <Avatar
                       sx={{
-                        bgcolor: "deepGray",
+                        bgcolor: "#343A40",
                         width: 50,
                         height: 50,
                         borderRadius: "15px",
@@ -425,7 +474,7 @@ function Dashboard() {
                   <Grid item>
                     <Avatar
                       sx={{
-                        bgcolor: "deepGray",
+                        bgcolor: "#343A40",
                         width: 50,
                         height: 50,
                         borderRadius: "15px",
@@ -436,7 +485,7 @@ function Dashboard() {
                   <Grid item>
                     <Avatar
                       sx={{
-                        bgcolor: "deepGray",
+                        bgcolor: "#343A40",
                         width: 50,
                         height: 50,
                         borderRadius: "15px",
@@ -447,7 +496,7 @@ function Dashboard() {
                   <Grid item>
                     <Avatar
                       sx={{
-                        bgcolor: "deepGray",
+                        bgcolor: "#343A40",
                         width: 50,
                         height: 50,
                         borderRadius: "15px",
@@ -462,7 +511,7 @@ function Dashboard() {
                   <Grid item>
                     <Avatar
                       sx={{
-                        bgcolor: "deepGray",
+                        bgcolor: "#343A40",
                         width: 50,
                         height: 50,
                         borderRadius: "15px",
@@ -473,7 +522,7 @@ function Dashboard() {
                   <Grid item>
                     <Avatar
                       sx={{
-                        bgcolor: "deepGray",
+                        bgcolor: "#343A40",
                         width: 50,
                         height: 50,
                         borderRadius: "15px",
@@ -484,7 +533,7 @@ function Dashboard() {
                   <Grid item>
                     <Avatar
                       sx={{
-                        bgcolor: "deepGray",
+                        bgcolor: "#343A40",
                         width: 50,
                         height: 50,
                         borderRadius: "15px",

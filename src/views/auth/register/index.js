@@ -94,8 +94,8 @@ export default function Register() {
           backgroundImage: `url(${require("../../../assets/images/Avatar.png")})`,
           backgroundRepeat: "no-repeat",
           backgroundColor: (t) =>
-            t.palette.mode === "light" ? t.palette.bl[50] : t.palette.grey[900],
-          // backgroundSize: "cover",
+            t.palette.mode === "light" ? t.palette.bl[50] : "#191919",
+          backgroundSize: "50vh",
           backgroundPosition: "right bottom",
         }}
       />
@@ -129,6 +129,9 @@ export default function Register() {
           display: "flex",
           justifyContent: "center",
           alignItems: "center",
+          height: "100vh",
+          overflow: "hidden",
+          overflowY: "scroll"
         }}
       >
         <Box

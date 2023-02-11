@@ -156,10 +156,12 @@ function DashboardLayout(props) {
           </IconButton>
         </Toolbar>
         {/* <Divider /> */}
-        <List component="nav">
+        <List component="nav" sx={{height: "100%"}}>
           <MainListItems />
-          {/* <Divider sx={{ my: 1 }} /> */}
+          <Divider sx={{ my: 1 }} />
+          <div style={{position: "absolute", bottom: 20}}>
           <SecondaryListItems />
+          </div>
         </List>
       </Drawer>
       <Box
