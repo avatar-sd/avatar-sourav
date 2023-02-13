@@ -10,10 +10,13 @@ import {
 } from "../../../sharedComponents/input";
 import { StyledOr } from "./style";
 import { useNavigate } from "react-router-dom";
+import { Alert, Snackbar } from "@mui/material";
 
 export default function ForgotPassword() {
   const navigate = useNavigate();
   const [isUserVerified, setIsUserVerified] = React.useState(false);
+  const [userName, setUserName] = React.useState("");
+  const [error, setError] = React.useState("");
   const handleSubmit = (event) => {
     event.preventDefault();
     const data = new FormData(event.currentTarget);
@@ -21,6 +24,14 @@ export default function ForgotPassword() {
       email: data.get("email"),
       password: data.get("password"),
     });
+  };
+
+  const onForgot = () => {
+    if (userName === "") {
+      setError("Userid Required!");
+    } else {
+      setIsUserVerified(!isUserVerified);
+    }
   };
 
   return (
@@ -101,7 +112,12 @@ export default function ForgotPassword() {
             sx={{ mt: 1 }}
           >
             {!isUserVerified ? (
-              <InputComp placeholder="Enter your user name" name="Username" />
+              <InputComp
+                placeholder="Enter your user name"
+                name="Username"
+                onChange={(e) => setUserName(e.target.value)}
+                value={userName}
+              />
             ) : null}
             {isUserVerified ? (
               <PasswordComp
@@ -116,13 +132,28 @@ export default function ForgotPassword() {
               type="submit"
               variant="contained"
               sx={{ mt: 3, mb: 2 }}
-              onClick={() => setIsUserVerified(!isUserVerified)}
+              onClick={onForgot}
             >
               {isUserVerified ? "Change Password" : "Forgot Password"}
             </ButtonComp>
           </Box>
         </Box>
       </Grid>
+      <Snackbar
+        open={error !== ""}
+        anchorOrigin={{ vertical: "top", horizontal: "right" }}
+        autoHideDuration={6000}
+        onClose={() => setError("")}
+        severity="error"
+      >
+        <Alert
+          onClose={() => setError("")}
+          severity="error"
+          sx={{ width: "100%" }}
+        >
+          {error}
+        </Alert>
+      </Snackbar>
     </Grid>
   );
 }

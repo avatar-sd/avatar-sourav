@@ -19,9 +19,9 @@ function Preview() {
   const [details, setDetails] = React.useState("");
   const navigate = useNavigate();
 
-  React.useEffect(()=> {
-    setPage(1)
-  },[])
+  React.useEffect(() => {
+    setPage(1);
+  }, []);
 
   const handleChange = (event, newValue) => {
     setValue(newValue);
@@ -56,32 +56,34 @@ function Preview() {
 
   return (
     <DashboardLayout
+      noAppBar={true}
       // title={ ` Step 1 of 4: Select Your Bodytype`}
       title={
-        <span style={{ cursor: "pointer" }} onClick={() => navigate('/')}>
+        <span style={{ cursor: "pointer" }} onClick={() => navigate("/")}>
           <ArrowBackIosIcon style={{ paddingTop: "5px" }} />
           Preview
         </span>
       }
     >
-      <Grid item xs={12} md={4} lg={3}>
+      <Grid item xs={12} md={12} lg={12}>
         <Box
           style={{
             backgroundColor: "#212121",
-            width: "calc(95vw - 64px)",
-            height: "calc(95vh - 64px)",
+            width: "calc(100vw - 64px)",
+            height: "calc(100vh - 64px)",
             borderRadius: "10px",
-            textAlign: 'center'
+            textAlign: "center",
           }}
         >
           <iframe
-                src="http://13.232.214.9"
-                style={{
-                  width: "calc(95vw - 70px)",
-                  height: "calc(95vh - 70px)",
-                  border: "none",
-                }}
-              ></iframe>
+            src="http://13.232.214.9"
+            style={{
+              width: "calc(100vw - 45px)",
+              height: "calc(100vh)",
+              border: "none",
+              marginTop: '-35px'
+            }}
+          ></iframe>
         </Box>
       </Grid>
     </DashboardLayout>
