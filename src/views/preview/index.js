@@ -76,7 +76,7 @@ function Preview() {
           }}
         >
           <iframe
-            src="http://13.232.214.9"
+            src="http://13.232.214.9/11_avatar_preview.html"
             style={{
               width: "calc(100vw - 45px)",
               height: "calc(100vh)",
