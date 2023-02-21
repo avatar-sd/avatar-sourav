@@ -190,7 +190,7 @@ function Dashboard() {
                   <Avatar
                     sx={{ bgcolor: "#343A40", width: 100, height: 100 }}
                     image={require("../../assets/images/male-1.png")}
-                    onClick={() => setPage(3)}
+                    onClick={() => setPage(3.6)}
                   />
                 </Grid>
               ) : null}
@@ -199,7 +199,7 @@ function Dashboard() {
                   <Avatar
                     sx={{ bgcolor: "#343A40", width: 100, height: 100 }}
                     image={require("../../assets/images/male-2.png")}
-                    onClick={() => setPage(3)}
+                    onClick={() => setPage(3.6)}
                   />
                 </Grid>
               ) : null}
@@ -208,7 +208,7 @@ function Dashboard() {
                   <Avatar
                     sx={{ bgcolor: "#343A40", width: 100, height: 100 }}
                     image={require("../../assets/images/male-3.png")}
-                    onClick={() => setPage(3)}
+                    onClick={() => setPage(3.6)}
                   />
                 </Grid>
               ) : null}
@@ -217,7 +217,7 @@ function Dashboard() {
                   <Avatar
                     sx={{ bgcolor: "#343A40", width: 100, height: 100 }}
                     image={require("../../assets/images/male-4.png")}
-                    onClick={() => setPage(3)}
+                    onClick={() => setPage(3.6)}
                   />
                 </Grid>
               ) : null}
@@ -226,7 +226,7 @@ function Dashboard() {
                   <Avatar
                     sx={{ bgcolor: "#343A40", width: 100, height: 100 }}
                     image={require("../../assets/images/male-5.png")}
-                    onClick={() => setPage(3)}
+                    onClick={() => setPage(3.6)}
                   />
                 </Grid>
               ) : null}
@@ -235,7 +235,7 @@ function Dashboard() {
                   <Avatar
                     sx={{ bgcolor: "#343A40", width: 100, height: 100 }}
                     image={require("../../assets/images/male-6.png")}
-                    onClick={() => setPage(3)}
+                    onClick={() => setPage(3.6)}
                   />
                 </Grid>
               ) : null}
@@ -244,7 +244,7 @@ function Dashboard() {
                   <Avatar
                     sx={{ bgcolor: "#343A40", width: 100, height: 100 }}
                     image={require("../../assets/images/male-7.png")}
-                    onClick={() => setPage(3)}
+                    onClick={() => setPage(3.6)}
                   />
                 </Grid>
               ) : null}
@@ -253,7 +253,7 @@ function Dashboard() {
                   <Avatar
                     sx={{ bgcolor: "#343A40", width: 100, height: 100 }}
                     image={require("../../assets/images/male-8.png")}
-                    onClick={() => setPage(3)}
+                    onClick={() => setPage(3.6)}
                   />
                 </Grid>
               ) : null}
@@ -262,7 +262,7 @@ function Dashboard() {
                   <Avatar
                     sx={{ bgcolor: "#343A40", width: 100, height: 100 }}
                     image={require("../../assets/images/male-1.png")}
-                    onClick={() => setPage(3)}
+                    onClick={() => setPage(3.6)}
                   />
                 </Grid>
               ) : null}
@@ -271,7 +271,7 @@ function Dashboard() {
                   <Avatar
                     sx={{ bgcolor: "#343A40", width: 100, height: 100 }}
                     image={require("../../assets/images/female.png")}
-                    onClick={() => setPage(3)}
+                    onClick={() => setPage(3.4)}
                   />
                 </Grid>
               ) : null}
@@ -280,7 +280,7 @@ function Dashboard() {
                   <Avatar
                     sx={{ bgcolor: "#343A40", width: 100, height: 100 }}
                     image={require("../../assets/images/female.png")}
-                    onClick={() => setPage(3)}
+                    onClick={() => setPage(3.4)}
                   />
                 </Grid>
               ) : null}
@@ -289,16 +289,20 @@ function Dashboard() {
                   <Avatar
                     sx={{ bgcolor: "#343A40", width: 100, height: 100 }}
                     image={require("../../assets/images/female.png")}
-                    onClick={() => setPage(3)}
+                    onClick={() => setPage(3.6)}
                   />
                 </Grid>
               ) : null}
             </Grid>
           </Paper>
-        ) : page === 3 ? (
+        ) : page > 3 ? (
           <Grid item xs={12} md={12} lg={12}>
             <iframe
-              src="http://13.232.214.9"
+              src={`http://13.232.214.9?path=${
+                page < 3.5
+                  ? "https://avatarmodelfeta.s3.amazonaws.com/female+charecter.mb"
+                  : "https://avatarmodelfeta.s3.amazonaws.com/male+character+file.mb"
+              }`}
               style={{
                 width: "calc(100vw - 72px)",
                 height: "100vh",
