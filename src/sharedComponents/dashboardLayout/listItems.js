@@ -69,7 +69,7 @@ export const SecondaryListItems = () => {
   };
   return (
     <React.Fragment>
-      <ListItemButton>
+      <ListItemButton onClick={()=> navigate('/upload')}>
         <ListItemIcon>
           <img src={AddLogo} style={{ width: "30px", marginLeft: "-3px" }} />
         </ListItemIcon>

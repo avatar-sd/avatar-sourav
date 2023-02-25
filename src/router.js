@@ -6,6 +6,7 @@ import Dashboard from "./views/dashboard";
 import SaveAvatar from "./views/saveAvatar";
 import UserList from "./views/userList";
 import Preview from "./views/preview";
+import UploadAvatar from "./views/uploadAvatar";
 
 const Router = createBrowserRouter([
   {
@@ -26,6 +27,11 @@ const Router = createBrowserRouter([
   {
     path: "/preview",
     element: <Preview />,
+    children: [],
+  },
+  {
+    path: "/upload",
+    element: <UploadAvatar />,
     children: [],
   },
   {
