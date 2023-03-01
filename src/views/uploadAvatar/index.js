@@ -15,7 +15,7 @@ function UploadAvatar() {
     <DashboardLayout title="Collection">
       <div style={{ width: "100%", height: "100%" }}>
         <iframe
-        src='https://ayang.s3.amazonaws.com/ImportModelFromFile_PRJCT/index.html'
+        src='https://ayang.s3.amazonaws.com/ThreeJSUploadBuild/ImportModelFromFile_PRJCT/index.html'
           style={{
             width: "calc(100vw - 60px)",
             height: "100vh",
