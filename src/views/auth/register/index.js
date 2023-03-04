@@ -72,13 +72,13 @@ export default function Register() {
     let varData = localStorage.getItem("user")
       ? JSON.parse(localStorage.getItem("user"))
       : null;
-    if (!authStore.data && varData) {
+    if (varData !== null) {
       dispatch(tokenUpdate(varData));
     }
   }, []);
 
   React.useEffect(() => {
-    if (authStore.data) {
+    if (authStore.data !== undefined && authStore.data !== null) {
       navigate("/");
     }
   }, [authStore]);
@@ -99,21 +99,19 @@ export default function Register() {
           backgroundPosition: "right bottom",
         }}
       />
-    <div style={{ position: "absolute", top: "50px", left: "40px" }}>
-
-
-<img
-
-  src={require("../../../assets/images/logo.png")}
-/>
-<div style={{marginTop:"40px" }}>
-  <span className="" style={{ fontSize: "80px", fontWeight: "bold", color: "white", }}>
-    Metaverse
-  </span>
-  <br />
-  <img src={require("../../../assets/images/3D Avatar Maker.png")} />
-</div>
-</div>
+      <div style={{ position: "absolute", top: "50px", left: "40px" }}>
+        <img src={require("../../../assets/images/logo.png")} />
+        <div style={{ marginTop: "40px" }}>
+          <span
+            className=""
+            style={{ fontSize: "80px", fontWeight: "bold", color: "white" }}
+          >
+            Metaverse
+          </span>
+          <br />
+          <img src={require("../../../assets/images/3D Avatar Maker.png")} />
+        </div>
+      </div>
       <Grid
         item
         xs={12}
@@ -131,7 +129,7 @@ export default function Register() {
           alignItems: "center",
           height: "100vh",
           overflow: "hidden",
-          overflowY: "scroll"
+          overflowY: "scroll",
         }}
       >
         <Box

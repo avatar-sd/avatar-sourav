@@ -2,11 +2,10 @@ import * as actionTypes from "../actions/actionTypes";
 import { updateObject } from "../../utils";
 
 export const initialState = {
-  data: null,
+  data: undefined,
 };
 
 const tokenUpdate = (state, action) => {
-  console.log(action.data);
   if (action.data) {
     return updateObject(state, {
       data: action.data,

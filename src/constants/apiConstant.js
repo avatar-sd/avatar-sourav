@@ -19,6 +19,8 @@ export const API = {
     userDetails: "/user_details",
   },
   authUrls: {
-    allUser: "all_user",
+    allUser: "/all_user",
+    logout: "/logout",
+    fetchAvatar: "/fetch_avatar",
   },
 };

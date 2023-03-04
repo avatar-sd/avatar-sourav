@@ -80,13 +80,13 @@ function DashboardLayout(props) {
     let varData = localStorage.getItem("user")
       ? JSON.parse(localStorage.getItem("user"))
       : null;
-    if (!authStore.data && varData) {
+      console.log(varData);
       dispatch(tokenUpdate(varData));
-    }
   }, []);
 
   React.useEffect(() => {
-    if (!authStore.data) {
+    console.log(authStore.data)
+    if (authStore.data === null) {
       navigate("/login");
     }
   }, [authStore]);
@@ -156,11 +156,11 @@ function DashboardLayout(props) {
           </IconButton>
         </Toolbar>
         {/* <Divider /> */}
-        <List component="nav" sx={{height: "100%"}}>
+        <List component="nav" sx={{ height: "100%" }}>
           <MainListItems />
           <Divider sx={{ my: 1 }} />
-          <div style={{position: "absolute", bottom: 20}}>
-          <SecondaryListItems />
+          <div style={{ position: "absolute", bottom: 20 }}>
+            <SecondaryListItems />
           </div>
         </List>
       </Drawer>

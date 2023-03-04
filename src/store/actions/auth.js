@@ -18,7 +18,7 @@ export const loader = (loading) => {
 export const tokenUpdate = (data) => {
   return {
     type: actionTypes.TOKEN_UPDATE,
-    data: data?.data ? data.data : null,
+    data: data,
   };
 };
 

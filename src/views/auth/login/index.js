@@ -72,13 +72,14 @@ export default function Login() {
     let varData = localStorage.getItem("user")
       ? JSON.parse(localStorage.getItem("user"))
       : null;
-    if (varData) {
-      dispatch(tokenUpdate({ data: varData }));
+    if (varData !== null) {
+      dispatch(tokenUpdate(varData));
     }
   }, []);
 
   React.useEffect(() => {
-    if (authStore.data) {
+    console.log(authStore.data);
+    if (authStore.data !== undefined && authStore.data !== null) {
       navigate("/");
     }
   }, [authStore]);
@@ -100,14 +101,12 @@ export default function Login() {
         }}
       />
       <div style={{ position: "absolute", top: "50px", left: "40px" }}>
-
-
-        <img
-
-          src={require("../../../assets/images/logo.png")}
-        />
-        <div style={{marginTop:"40px" }}>
-          <span className="" style={{ fontSize: "80px", fontWeight: "bold", color: "white", }}>
+        <img src={require("../../../assets/images/logo.png")} />
+        <div style={{ marginTop: "40px" }}>
+          <span
+            className=""
+            style={{ fontSize: "80px", fontWeight: "bold", color: "white" }}
+          >
             Metaverse
           </span>
           <br />
@@ -131,7 +130,7 @@ export default function Login() {
           alignItems: "center",
           height: "100vh",
           overflow: "hidden",
-          overflowY: "scroll"
+          overflowY: "scroll",
         }}
       >
         <Box
@@ -171,12 +170,16 @@ export default function Login() {
           >
             Connect with MetaMask
           </ButtonComp>
-          <ButtonComp variant="outlined" sx={{ mb: 2 }} startIcon={
-            <img
-              src={require("../../../assets/images/google.png")}
-              style={{ width: "30px", marginRight: "10px" }}
-            />
-          }>
+          <ButtonComp
+            variant="outlined"
+            sx={{ mb: 2 }}
+            startIcon={
+              <img
+                src={require("../../../assets/images/google.png")}
+                style={{ width: "30px", marginRight: "10px" }}
+              />
+            }
+          >
             Connect with Google
           </ButtonComp>
           <StyledOr component="p" variant="p">

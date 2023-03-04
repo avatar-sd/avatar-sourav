@@ -34,14 +34,14 @@ export const MainListItems = () => {
         </ListItemIcon>
         <ListItemText primary="Integrations" />
       </ListItemButton>
-      <ListItemButton onClick={() => navigate("/")}>
+      <ListItemButton onClick={() => navigate("/announcement")}>
         <ListItemIcon>
           <img
             src={bannerLogo}
             style={{ width: "50px", marginLeft: "-10px" }}
           />
         </ListItemIcon>
-        <ListItemText primary="Dashboard" />
+        <ListItemText primary="Announcement" />
       </ListItemButton>
       {authStore?.data?.user?.type === "admin" ? (
         <ListItemButton onClick={() => navigate("/user_list")}>

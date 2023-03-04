@@ -7,6 +7,8 @@ import SaveAvatar from "./views/saveAvatar";
 import UserList from "./views/userList";
 import Preview from "./views/preview";
 import UploadAvatar from "./views/uploadAvatar";
+import Announcement from "./views/announcement";
+import Setting from "./views/setting";
 
 const Router = createBrowserRouter([
   {
@@ -27,6 +29,16 @@ const Router = createBrowserRouter([
   {
     path: "/preview",
     element: <Preview />,
+    children: [],
+  },
+  {
+    path: "/announcement",
+    element: <Announcement />,
+    children: [],
+  },
+  {
+    path: "/setting",
+    element: <Setting />,
     children: [],
   },
   {
